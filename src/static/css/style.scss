@@ -1,0 +1,104 @@
+html, body {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  box-shadow: 0 0 3px 0 #ccc;
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+select {
+  padding: 10px;
+  background: white;
+  border: none;
+  box-shadow: 0 0 3px 0 #ccc;
+
+  option {
+    padding: 10px;
+  }
+}
+
+#root {
+  height: 100%;
+  margin: 0 auto;
+}
+
+.app-bar {
+  display: flex;
+  align-items: center;
+  background: #6200EE;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  margin: 0;
+}
+
+#news-container {
+  padding-top: 60px;
+}
+
+.load-more-container {
+  padding: 10px;
+  text-align: right;
+
+  button {
+    background: gold;
+  }
+}
+
+.search-controls-container {
+  display: flex;
+  padding: 10px;
+
+  input[type="search"] {
+    padding: 10px;
+  }
+}
+
+.news-item {
+  display: flex;
+  padding: 5px;
+
+  > * {
+    margin: 5px;
+  }
+
+  .image-container {
+    img {
+      width: 200px;
+      background: transparent url("../pics/spinner.gif") center no-repeat;
+    }
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+    .title {
+      flex: 1;
+      font-weight: bold;
+    }
+
+    .description {
+      flex: 3;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .link-container {
+      flex: 1;
+    }
+  }
+}
